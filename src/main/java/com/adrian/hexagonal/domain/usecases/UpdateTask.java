@@ -6,5 +6,5 @@ import java.util.Optional;
 
 
 public interface UpdateTask {
-    Optional<Task> updateTask(Long id, Task updatedTask);
+    Task updateTask(Long id, Task updatedTask);
 }
