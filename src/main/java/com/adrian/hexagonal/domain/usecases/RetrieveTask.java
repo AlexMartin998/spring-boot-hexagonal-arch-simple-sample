@@ -6,6 +6,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface RetrieveTask {
-    Optional<Task> findOne(Long id);
+    Task findOne(Long id);
     List<Task> findAll();
 }
