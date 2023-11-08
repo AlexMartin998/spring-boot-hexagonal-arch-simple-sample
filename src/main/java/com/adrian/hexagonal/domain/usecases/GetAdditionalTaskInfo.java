@@ -4,5 +4,5 @@ import com.adrian.hexagonal.domain.models.AdditionalTaskInfo;
 
 
 public interface GetAdditionalTaskInfo {
-    AdditionalTaskInfo getAdditionalTaskInfo(Long taskId);
+    AdditionalTaskInfo getAdditionalTaskInfo(Long id);
 }
