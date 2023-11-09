@@ -15,11 +15,10 @@ public class TaskDeleter implements DeleteTask {
 
     @Override
     public boolean deleteTask(Long id) {
-        taskRepository.findOne(id).orElseThrow(
-                () -> new ResourceNotFoundException("Task", "ID", id)
-        );
+        boolean deleted = taskRepository.delete(id);
+        if (!deleted) throw new ResourceNotFoundException("Task", "ID", id);
 
-        return taskRepository.delete(id);
+        return true;
     }
 
 }
