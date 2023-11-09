@@ -1,5 +1,7 @@
 package com.adrian.hexagonal.infrastructure.shared.exceptions;
 
+import com.adrian.hexagonal.domain.exceptions.BadRequestException;
+import com.adrian.hexagonal.domain.exceptions.ResourceNotFoundException;
 import com.adrian.hexagonal.infrastructure.shared.dto.ErrorDetailsDto;
 import lombok.NonNull;
 import org.springframework.http.HttpHeaders;

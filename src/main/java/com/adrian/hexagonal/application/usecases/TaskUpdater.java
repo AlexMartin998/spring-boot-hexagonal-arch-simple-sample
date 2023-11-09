@@ -3,7 +3,7 @@ package com.adrian.hexagonal.application.usecases;
 import com.adrian.hexagonal.domain.models.Task;
 import com.adrian.hexagonal.domain.repositories.TaskRepository;
 import com.adrian.hexagonal.domain.usecases.UpdateTask;
-import com.adrian.hexagonal.infrastructure.shared.exceptions.ResourceNotFoundException;
+import com.adrian.hexagonal.domain.exceptions.ResourceNotFoundException;
 import lombok.AllArgsConstructor;
 
 
