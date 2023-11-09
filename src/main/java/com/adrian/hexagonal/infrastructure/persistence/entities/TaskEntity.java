@@ -1,6 +1,5 @@
 package com.adrian.hexagonal.infrastructure.persistence.entities;
 
-import com.adrian.hexagonal.domain.models.Task;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,7 +27,7 @@ public class TaskEntity {
 
 
     // // Mapping
-    public static TaskEntity mapModelToEntity(Task task) {
+    /*public static TaskEntity mapModelToEntity(Task task) {
         return TaskEntity.builder()
                 .id(task.getId())
                 .title(task.getTitle())
@@ -46,6 +45,6 @@ public class TaskEntity {
                 .creationDate(creationDate)
                 .completed(completed)
                 .build();
-    }
+    }*/
 
 }

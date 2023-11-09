@@ -5,8 +5,6 @@ import com.adrian.hexagonal.application.usecases.*;
 import com.adrian.hexagonal.domain.out.ExternalServicePort;
 import com.adrian.hexagonal.domain.repositories.TaskRepository;
 import com.adrian.hexagonal.domain.usecases.GetAdditionalTaskInfo;
-import com.adrian.hexagonal.infrastructure.adapters.ExternalServiceAdapter;
-import com.adrian.hexagonal.infrastructure.persistence.repositories.JpaTaskRepositoryAdapter;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

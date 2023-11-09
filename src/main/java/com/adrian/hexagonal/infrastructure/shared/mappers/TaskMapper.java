@@ -23,4 +23,8 @@ public class TaskMapper {
         return modelMapper.map(taskEntity, Task.class);
     }
 
+    public TaskEntity domainModelToEntity(Task task) {
+        return modelMapper.map(task, TaskEntity.class);
+    }
+
 }
