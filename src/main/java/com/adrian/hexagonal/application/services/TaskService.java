@@ -3,6 +3,7 @@ package com.adrian.hexagonal.application.services;
 import com.adrian.hexagonal.domain.models.AdditionalTaskInfo;
 import com.adrian.hexagonal.domain.models.Task;
 import com.adrian.hexagonal.domain.usecases.*;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -19,12 +20,15 @@ public class TaskService implements CreateTask, UpdateTask, DeleteTask, Retrieve
     private final GetAdditionalTaskInfo additionalTaskInfoRetriever;
 
 
+    // // UseCases (Composition over the Inheritance)
     @Override
+    @Transactional
     public Task createTask(Task task) {
         return taskCreator.createTask(task);
     }
 
     @Override
+    @Transactional
     public boolean deleteTask(Long id) {
         return taskDeleter.deleteTask(id);
     }
@@ -45,6 +49,7 @@ public class TaskService implements CreateTask, UpdateTask, DeleteTask, Retrieve
     }
 
     @Override
+    @Transactional
     public Task updateTask(Long id, Task updatedTask) {
         return taskUpdater.updateTask(id, updatedTask);
     }
