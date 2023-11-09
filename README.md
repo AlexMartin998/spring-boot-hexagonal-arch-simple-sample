@@ -3,7 +3,7 @@
 
 ## Features
 
-⚡️ Hexagonal Architecture
+⚡️ Hexagonal Architecture\
 ⚡️ Repository Pattern
 
 
