@@ -3,6 +3,7 @@ package com.adrian.hexagonal.infrastructure.rest.controllers;
 import com.adrian.hexagonal.application.services.TaskService;
 import com.adrian.hexagonal.domain.models.Task;
 import com.adrian.hexagonal.infrastructure.rest.dtos.CreateTaskDto;
+import com.adrian.hexagonal.infrastructure.rest.dtos.UpdateTaskDto;
 import com.adrian.hexagonal.infrastructure.shared.mappers.TaskMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -40,8 +41,10 @@ public class TasksController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Task> update(@PathVariable Long id, @RequestBody Task updatedTask) {
-        return ResponseEntity.ok(tasksService.updateTask(id, updatedTask));
+    public ResponseEntity<Task> update(@PathVariable Long id, @Valid @RequestBody UpdateTaskDto updateTaskDto) {
+        Task updatedTask = tasksService.updateTask(id, taskMapper.updateDtoToEntity(updateTaskDto));
+
+        return ResponseEntity.ok(updatedTask);
     }
 
     @DeleteMapping("/{id}")
