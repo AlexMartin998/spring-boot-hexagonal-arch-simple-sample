@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ResponseStatus(value = HttpStatus.NOT_FOUND)
-public class UserNotFoundException extends RuntimeException {
+@ResponseStatus(value = HttpStatus.BAD_REQUEST)
+public class BadRequestException extends RuntimeException {
 
     private String message;
 
